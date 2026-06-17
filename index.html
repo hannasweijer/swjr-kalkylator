@@ -119,7 +119,9 @@ function calc() {
   const initiativ = +document.getElementById('initiativ').value || 0;
   const gradNu = (+document.getElementById('grad-nu').value || 0) / 100;
   const gradMed = (+document.getElementById('grad-med').value || 0) / 100;
-  const varde = +document.getElementById('varde').value || 0;
+  const varde = Number(
+  document.getElementById('varde').value.replace(/\s/g, '')
+) || 0;
   const genomNu = Math.round(initiativ * gradNu);
   const genomMed = Math.round(initiativ * gradMed);
   const extra = Math.max(0, genomMed - genomNu);
