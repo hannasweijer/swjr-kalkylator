@@ -1,44 +1,162 @@
-Kostnaden för att inte agera
-
-De flesta VD:ar jag möter har redan svaren. Planen finns, målen är satta. Det som saknas är strukturen som ser till att det händer — varje vecka, utan undantag.  Fyll i dina siffror och se vad glappet mellan dina beslut och dina resultat kostar per år.
-🗺️
-STRATEGI
-20 initiativ
-→
-🎯
-FOKUS
-3 prioriteringar
-→
-✅
-GENOMFÖRANDE
-8 → 16
-→
-📈
-AFFÄRSVÄRDE
-2 000 000 kr
-
-NULÄGE — UTAN STRUKTURERAD EXEKVERING
-Strategiska initiativ planerade per år
-Nuvarande genomförandegrad (%)
-Genomsnittligt värde per initiativ (kr)
-Initiativ som genomförs idag
-—
-
-MED SWJR — STRATEGIEXEKVERING & MÅLSTYRNING
-Genomförandegrad med SWJR (%)
-Initiativ som genomförs med SWJR
-—
-Vad kostar det att inte agera?
-—
-i uteblivet affärsvärde per år
-Realiserat affärsvärde med SWJR
-—
-
-Se vad det kostar dig — och vad vi kan göra åt det
-Lämna dina uppgifter så hör jag av mig med en personlig genomgång. Du kan också boka ett kostnadsfritt strategisamtal direkt.
-Förnamn
-Efternamn
-Företagsmail
-Företag
-Boka mitt kostnadsfria strategisamtal →
-Vi delar aldrig dina uppgifter med tredje part.
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kostnaden för att inte agera | SWJR</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: #f7f7f5; color: #1a1a1a; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; padding: 48px 16px; }
+  .card { background: #ffffff; border-radius: 16px; border: 1px solid #e5e5e0; padding: 40px 36px; max-width: 640px; width: 100%; }
+  .headline { font-size: 28px; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; line-height: 1.2; }
+  .headline-accent { display: block; width: 48px; height: 4px; background: #c0006e; border-radius: 2px; margin: 10px 0 16px; }
+  .subline { font-size: 15px; color: #666; margin-bottom: 32px; line-height: 1.6; }
+  .chain { display: flex; align-items: center; margin-bottom: 32px; background: #f7f7f5; border-radius: 10px; overflow: hidden; border: 1px solid #e5e5e0; }
+  .chain-step { flex: 1; padding: 12px 8px; text-align: center; }
+  .chain-sep { color: #aaa; font-size: 16px; padding: 0 2px; }
+  .chain-step .icon { font-size: 18px; margin-bottom: 4px; }
+  .chain-step .clabel { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+  .chain-step .cval { font-size: 13px; font-weight: 600; color: #1a1a1a; }
+  .section { background: #f7f7f5; border-radius: 12px; border: 1px solid #e5e5e0; padding: 20px 24px; margin-bottom: 16px; }
+  .section-title { font-size: 13px; font-weight: 600; color: #555; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; }
+  .field label { display: block; font-size: 12px; color: #666; margin-bottom: 5px; }
+  .field input[type="number"] { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px; font-family: inherit; color: #1a1a1a; background: #fff; outline: none; }
+  .result-row { margin-top: 16px; padding-top: 14px; border-top: 1px solid #e5e5e0; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .result-label { font-size: 13px; color: #666; }
+  .result-val { font-size: 16px; font-weight: 600; }
+  .gap-box { background: #fce7f3; border: 1px solid #f9a8d4; border-radius: 14px; padding: 24px 28px; margin-bottom: 16px; text-align: center; }
+  .gap-question { font-size: 15px; color: #831843; margin-bottom: 10px; font-weight: 500; }
+  .gap-amount { font-size: 42px; font-weight: 700; color: #c0006e; line-height: 1; margin-bottom: 6px; }
+  .gap-desc { font-size: 13px; color: #9d174d; }
+  .with-box { background: #f0fdf4; border: 1px solid #86efac; border-radius: 14px; padding: 20px 28px; margin-bottom: 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .with-label { font-size: 13px; color: #14532d; font-weight: 500; }
+  .with-amount { font-size: 24px; font-weight: 700; color: #15803d; white-space: nowrap; }
+  .divider { border: none; border-top: 1px solid #e5e5e0; margin: 28px 0; }
+  .form-title { font-size: 17px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
+  .form-sub { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.5; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+  .form-field label { display: block; font-size: 12px; color: #666; margin-bottom: 5px; }
+  .form-field input { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px; font-family: inherit; color: #1a1a1a; background: #fff; outline: none; }
+  .form-field.full { grid-column: 1 / -1; }
+  .submit-btn { width: 100%; padding: 14px; background: #c0006e; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; font-family: inherit; cursor: pointer; margin-top: 8px; }
+  .submit-btn:hover { background: #a0005c; }
+  .calendly-section { display: none; margin-top: 24px; text-align: center; }
+  .calendly-section.visible { display: block; }
+  .calendly-title { font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
+  .calendly-sub { font-size: 13px; color: #666; margin-bottom: 16px; }
+  .book-btn { display: inline-block; padding: 13px 28px; background: #c0006e; color: #fff; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; }
+  .book-btn:hover { background: #a0005c; }
+  .success-msg { display: none; background: #f0fdf4; border: 1px solid #86efac; border-radius: 10px; padding: 16px 20px; font-size: 14px; color: #14532d; margin-top: 8px; text-align: center; line-height: 1.6; }
+  .success-msg.visible { display: block; }
+  .privacy { font-size: 11px; color: #aaa; margin-top: 10px; text-align: center; }
+  @media (max-width: 520px) { .card { padding: 28px 20px; } .form-grid { grid-template-columns: 1fr; } .chain { flex-direction: column; } .chain-sep { display: none; } .chain-step { border-bottom: 1px solid #e5e5e0; width: 100%; } }
+</style>
+</head>
+<body>
+<div class="card">
+  <p class="headline">Kostnaden för att inte agera</p>
+  <span class="headline-accent"></span>
+  <p class="subline">De flesta VD:ar jag möter har redan svaren. Planen finns, målen är satta. Det som saknas är strukturen som ser till att det händer — varje vecka, utan undantag.<br><br>Fyll i dina siffror och se vad glappet mellan dina beslut och dina resultat kostar per år.</p>
+  <div class="chain">
+    <div class="chain-step"><div class="icon">🗺️</div><div class="clabel">Strategi</div><div class="cval" id="c1">20 initiativ</div></div>
+    <div class="chain-sep">→</div>
+    <div class="chain-step"><div class="icon">🎯</div><div class="clabel">Fokus</div><div class="cval">3 prioriteringar</div></div>
+    <div class="chain-sep">→</div>
+    <div class="chain-step"><div class="icon">✅</div><div class="clabel">Genomförande</div><div class="cval" id="c3">8 → 16</div></div>
+    <div class="chain-sep">→</div>
+    <div class="chain-step"><div class="icon">📈</div><div class="clabel">Affärsvärde</div><div class="cval" id="c4">2 000 000 kr</div></div>
+  </div>
+  <div class="section">
+    <div class="section-title"><div class="dot" style="background:#888"></div>Nuläge — utan strukturerad exekvering</div>
+    <div class="fields">
+      <div class="field"><label>Strategiska initiativ planerade per år</label><input type="number" id="initiativ" value="20" min="1" step="1" /></div>
+      <div class="field"><label>Nuvarande genomförandegrad (%)</label><input type="number" id="grad-nu" value="40" min="1" max="100" step="1" /></div>
+      <div class="field"><label>Genomsnittligt värde per initiativ (kr)</label><input type="number" id="varde" value="250000" min="0" step="10000" /></div>
+    </div>
+    <div class="result-row"><span class="result-label">Initiativ som genomförs idag</span><span class="result-val" id="r-nu" style="color:#c0006e">—</span></div>
+  </div>
+  <div class="section">
+    <div class="section-title"><div class="dot" style="background:#15803d"></div>Med SWJR — strategiexekvering &amp; målstyrning</div>
+    <div class="fields">
+      <div class="field"><label>Genomförandegrad med SWJR (%)</label><input type="number" id="grad-med" value="80" min="1" max="100" step="1" /></div>
+    </div>
+    <div class="result-row"><span class="result-label">Initiativ som genomförs med SWJR</span><span class="result-val" id="r-med" style="color:#15803d">—</span></div>
+  </div>
+  <div class="gap-box">
+    <div class="gap-question">Vad kostar det att inte agera?</div>
+    <div class="gap-amount" id="gap">—</div>
+    <div class="gap-desc" id="gap-desc">i uteblivet affärsvärde per år</div>
+  </div>
+  <div class="with-box">
+    <div class="with-label">Realiserat affärsvärde med SWJR</div>
+    <div class="with-amount" id="varde-med">—</div>
+  </div>
+  <hr class="divider" />
+  <div id="form-section">
+    <p class="form-title">Se vad det kostar dig — och vad vi kan göra åt det</p>
+    <p class="form-sub">Lämna dina uppgifter så hör jag av mig med en personlig genomgång. Du kan också boka ett kostnadsfritt strategisamtal direkt.</p>
+    <div class="form-grid">
+      <div class="form-field"><label>Förnamn</label><input type="text" id="f-namn" placeholder="Anna" /></div>
+      <div class="form-field"><label>Efternamn</label><input type="text" id="f-enamn" placeholder="Svensson" /></div>
+      <div class="form-field full"><label>Företagsmail</label><input type="email" id="f-mail" placeholder="anna@foretag.se" /></div>
+      <div class="form-field full"><label>Företag</label><input type="text" id="f-foretag" placeholder="Företaget AB" /></div>
+    </div>
+    <button class="submit-btn" onclick="handleSubmit()">Boka mitt kostnadsfria strategisamtal →</button>
+    <p class="privacy">Vi delar aldrig dina uppgifter med tredje part.</p>
+  </div>
+  <div class="success-msg" id="success"><strong>Tack!</strong> Jag återkommer till dig inom kort.<br />Eller boka ditt strategisamtal direkt nedan — 30 minuter, kostnadsfritt.</div>
+  <div class="calendly-section" id="calendly-section">
+    <p class="calendly-title">Välj en tid som passar dig</p>
+    <p class="calendly-sub">30 minuter. Kostnadsfritt. Vi går igenom glappet mellan dina beslut och dina resultat — och vad som krävs för att stänga det.</p>
+    <a class="book-btn" href="https://calendly.com/hanna-swjr" target="_blank" rel="noopener">Boka strategisamtal →</a>
+  </div>
+</div>
+<script>
+function kr(n) { return Math.round(n).toLocaleString('sv-SE') + ' kr'; }
+function calc() {
+  const initiativ = +document.getElementById('initiativ').value || 0;
+  const gradNu = (+document.getElementById('grad-nu').value || 0) / 100;
+  const gradMed = (+document.getElementById('grad-med').value || 0) / 100;
+  const varde = +document.getElementById('varde').value || 0;
+  const genomNu = Math.round(initiativ * gradNu);
+  const genomMed = Math.round(initiativ * gradMed);
+  const extra = Math.max(0, genomMed - genomNu);
+  const glapp = extra * varde;
+  const vardeMed = genomMed * varde;
+  document.getElementById('r-nu').textContent = genomNu + ' av ' + initiativ + ' initiativ';
+  document.getElementById('r-med').textContent = genomMed + ' av ' + initiativ + ' initiativ';
+  document.getElementById('gap').textContent = kr(glapp);
+  document.getElementById('gap-desc').textContent = extra + ' fler initiativ × ' + kr(varde) + ' = uteblivet värde per år';
+  document.getElementById('varde-med').textContent = kr(vardeMed);
+  document.getElementById('c1').textContent = initiativ + ' initiativ';
+  document.getElementById('c3').textContent = genomNu + ' → ' + genomMed;
+  document.getElementById('c4').textContent = kr(glapp);
+}
+function handleSubmit() {
+  const namn = document.getElementById('f-namn').value.trim();
+  const mail = document.getElementById('f-mail').value.trim();
+  if (!namn || !mail) { alert('Fyll i minst förnamn och e-post.'); return; }
+  fetch('https://formspree.io/f/mojzzjdz', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      namn: namn + ' ' + document.getElementById('f-enamn').value.trim(),
+      mail: mail,
+      foretag: document.getElementById('f-foretag').value.trim(),
+      initiativ: document.getElementById('initiativ').value,
+      grad_nu: document.getElementById('grad-nu').value + '%',
+      grad_med: document.getElementById('grad-med').value + '%',
+      varde_per_initiativ: document.getElementById('varde').value + ' kr',
+    })
+  }).catch(() => {});
+  document.getElementById('form-section').style.display = 'none';
+  document.getElementById('success').classList.add('visible');
+  document.getElementById('calendly-section').classList.add('visible');
+}
+document.querySelectorAll('input[type="number"]').forEach(el => el.addEventListener('input', calc));
+calc();
+</script>
+</body>
+</html>
